@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://xswpm7040qa0"]
+
+[ext_resource type="Theme" uid="uid://dlwpgtq4i50gd" path="res://themes/MainTheme.tres" id="1_vjb58"]
+[ext_resource type="Script" uid="uid://ba443mrm1m8un" path="res://scripts/main-menu.gd" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://dem2at3wc1odg" path="res://images/rtp white.svg" id="3_con2f"]
+[ext_resource type="PackedScene" uid="uid://cqmdimb36a2mm" path="res://scenes/cursor.tscn" id="4_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://qoxucv13vv33" path="res://images/cursors and icons/cursor-arrow.png" id="5_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cophmdlart5c0" path="res://images/TileHighlightpng.png" id="6_v86rl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vjb58")
+script = ExtResource("2_con2f")
+
+[node name="mainMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="dualPNL" type="HBoxContainer" parent="mainMenu"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="leftPNL" type="MarginContainer" parent="mainMenu/dualPNL"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="mainMenu/dualPNL/leftPNL"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.152941, 0.156863, 0.164706, 1)
+
+[node name="leftVBox" type="VBoxContainer" parent="mainMenu/dualPNL/leftPNL"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="logoBox" type="MarginContainer" parent="mainMenu/dualPNL/leftPNL/leftVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="mainMenu/dualPNL/leftPNL/leftVBox/logoBox"]
+layout_mode = 2
+texture = ExtResource("3_con2f")
+expand_mode = 5
+
+[node name="btnMargin" type="MarginContainer" parent="mainMenu/dualPNL/leftPNL/leftVBox"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 40
+
+[node name="btnBox" type="VBoxContainer" parent="mainMenu/dualPNL/leftPNL/leftVBox/btnMargin"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="playBTN" type="Button" parent="mainMenu/dualPNL/leftPNL/leftVBox/btnMargin/btnBox"]
+layout_mode = 2
+text = "PLAY"
+
+[node name="optionsBTN" type="Button" parent="mainMenu/dualPNL/leftPNL/leftVBox/btnMargin/btnBox"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="quitBTN" type="Button" parent="mainMenu/dualPNL/leftPNL/leftVBox/btnMargin/btnBox"]
+layout_mode = 2
+text = "QUIT"
+
+[node name="rightPNL" type="MarginContainer" parent="mainMenu/dualPNL"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="mainMenu/dualPNL/rightPNL"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="mainMenu/dualPNL/rightPNL/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.564706, 0.305882, 0.333333, 1)
+
+[node name="Cursor" parent="." instance=ExtResource("4_mhnvy")]
+cursor_texture = ExtResource("5_g3eks")
+highlight_texture = ExtResource("6_v86rl")
