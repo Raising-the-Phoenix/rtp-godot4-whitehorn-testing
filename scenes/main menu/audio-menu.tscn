@@ -1,0 +1,268 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl2t8v2rydrwe"]
+
+[ext_resource type="Theme" uid="uid://dlwpgtq4i50gd" path="res://themes/MainTheme.tres" id="1_rcjhd"]
+[ext_resource type="Script" uid="uid://dw5ds147i2cna" path="res://scripts/audio-menu.gd" id="2_10fgp"]
+[ext_resource type="Texture2D" uid="uid://dhamob8ymmaqp" path="res://images/logo-RTP-white.png" id="3_mytv4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lqaoh"]
+font_size = 50
+font_color = Color(1, 1, 1, 0.603922)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10fgp"]
+bg_color = Color(0.564706, 0.305882, 0.333333, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.333333, 0.164706, 0.184314, 1)
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rcjhd")
+script = ExtResource("2_10fgp")
+
+[node name="audioMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="dualMargins" type="HBoxContainer" parent="audioMenu"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="leftMargin" type="MarginContainer" parent="audioMenu/dualMargins"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="audioMenu/dualMargins/leftMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.152941, 0.156863, 0.164706, 1)
+
+[node name="leftVBox" type="VBoxContainer" parent="audioMenu/dualMargins/leftMargin"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="logoBox" type="MarginContainer" parent="audioMenu/dualMargins/leftMargin/leftVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect2" type="TextureRect" parent="audioMenu/dualMargins/leftMargin/leftVBox/logoBox"]
+layout_mode = 2
+texture = ExtResource("3_mytv4")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="btMargin1" type="MarginContainer" parent="audioMenu/dualMargins/leftMargin/leftVBox"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 0
+
+[node name="btnBox" type="VBoxContainer" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="optionsLBL" type="Label" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+text = "OPTIONS MENU"
+horizontal_alignment = 1
+
+[node name="audioBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+disabled = true
+text = "AUDIO"
+
+[node name="videoBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+text = "VIDEO"
+
+[node name="controlsBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="gameBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+text = "GAME RULES"
+
+[node name="modsBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+text = "MODS"
+
+[node name="defaultsBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btMargin1/btnBox"]
+layout_mode = 2
+text = "DEFAULT SETTINGS"
+
+[node name="btnMargin2" type="MarginContainer" parent="audioMenu/dualMargins/leftMargin/leftVBox"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 40
+
+[node name="btnBox" type="VBoxContainer" parent="audioMenu/dualMargins/leftMargin/leftVBox/btnMargin2"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="backBTN" type="Button" parent="audioMenu/dualMargins/leftMargin/leftVBox/btnMargin2/btnBox"]
+layout_mode = 2
+text = "BACK"
+
+[node name="rightMargin" type="MarginContainer" parent="audioMenu/dualMargins"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="audioMenu/dualMargins/rightMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.564706, 0.305882, 0.333333, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="audioMenu/dualMargins/rightMargin"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="rightVBox" type="VBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="headMargin" type="MarginContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_bottom = 20
+
+[node name="headLabel" type="Label" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/headMargin"]
+layout_mode = 2
+text = "AUDIO MENU"
+label_settings = SubResource("LabelSettings_lqaoh")
+
+[node name="settingsMargin" type="MarginContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="set HBox" type="HBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="setVBox left" type="VBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="leftPNL" type="Panel" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_10fgp")
+
+[node name="scrollMargin left" type="MarginContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 5
+
+[node name="scrollContainer left" type="ScrollContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="vscroll left" type="VBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left/scrollContainer left"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="set1" type="HBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left/scrollContainer left/vscroll left"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left/scrollContainer left/vscroll left/set1"]
+layout_mode = 2
+text = "MUSIC VOLUME"
+
+[node name="musicVolume" type="LineEdit" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left/scrollContainer left/vscroll left/set1"]
+layout_mode = 2
+placeholder_text = "100%"
+max_length = 5
+clear_button_enabled = true
+
+[node name="musicMute" type="CheckBox" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left/scrollContainer left/vscroll left/set1"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox left/leftPNL/scrollMargin left/scrollContainer left/vscroll left/set1"]
+layout_mode = 2
+text = "MUTE"
+
+[node name="setVBox right" type="VBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="rightPNL" type="Panel" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_10fgp")
+
+[node name="scrollMargin right" type="MarginContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 5
+
+[node name="scrollContainer right" type="ScrollContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="vscroll right" type="VBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right/scrollContainer right"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="set1" type="HBoxContainer" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right/scrollContainer right/vscroll right"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right/scrollContainer right/vscroll right/set1"]
+layout_mode = 2
+text = "MUSIC VOLUME"
+
+[node name="musicVolume" type="LineEdit" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right/scrollContainer right/vscroll right/set1"]
+layout_mode = 2
+placeholder_text = "100%"
+max_length = 5
+
+[node name="musicMute" type="CheckBox" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right/scrollContainer right/vscroll right/set1"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="audioMenu/dualMargins/rightMargin/MarginContainer/rightVBox/settingsMargin/set HBox/setVBox right/rightPNL/scrollMargin right/scrollContainer right/vscroll right/set1"]
+layout_mode = 2
+text = "MUTE"

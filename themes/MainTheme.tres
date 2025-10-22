@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dlwpgtq4i50gd"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dlwpgtq4i50gd"]
 
 [ext_resource type="FontFile" uid="uid://d5xqwqfdgfrm" path="res://fonts/Economica-Bold.ttf" id="1_4as0w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ou2w3"]
+bg_color = Color(0.333492, 0.165273, 0.183775, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
 bg_color = Color(0.776471, 0.184314, 0.223529, 1)
@@ -11,8 +14,22 @@ bg_color = Color(0.564706, 0.305882, 0.333333, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hy44"]
 bg_color = Color(0.337255, 0.305882, 0.345098, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4as0w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylqdk"]
+bg_color = Color(0.333333, 0.203922, 0.215686, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qemgp"]
 bg_color = Color(0.564706, 0.305882, 0.333333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mltx3"]
+content_margin_top = 5.0
+content_margin_bottom = 10.0
+bg_color = Color(0.564706, 0.305882, 0.333333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5wx6"]
+bg_color = Color(0.333333, 0.203922, 0.215686, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qoycl"]
+bg_color = Color(0.92549, 0.87451, 0.643137, 1)
 
 [resource]
 Button/constants/content_margin_bottom = 10
@@ -20,7 +37,12 @@ Button/constants/content_margin_left = 20
 Button/constants/content_margin_right = 20
 Button/constants/content_margin_top = 10
 Button/fonts/font = ExtResource("1_4as0w")
+Button/styles/disabled = SubResource("StyleBoxFlat_ou2w3")
 Button/styles/hover = SubResource("StyleBoxFlat_ouk20")
 Button/styles/normal = SubResource("StyleBoxFlat_mae5d")
 Button/styles/pressed = SubResource("StyleBoxFlat_4hy44")
-Panel/styles/panel = SubResource("StyleBoxFlat_4as0w")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_ylqdk")
+Panel/styles/panel = SubResource("StyleBoxFlat_qemgp")
+ScrollContainer/styles/panel = SubResource("StyleBoxFlat_mltx3")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_g5wx6")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_qoycl")

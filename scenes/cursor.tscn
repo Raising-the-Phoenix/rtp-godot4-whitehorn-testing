@@ -1,17 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqmdimb36a2mm"]
+[gd_scene load_steps=5 format=3 uid="uid://cqmdimb36a2mm"]
 
 [ext_resource type="Script" uid="uid://bh6itglkyk7d5" path="res://scripts/cursor.gd" id="1_ndevg"]
 [ext_resource type="Texture2D" uid="uid://qoxucv13vv33" path="res://images/cursors and icons/cursor-arrow.png" id="2_ndevg"]
 [ext_resource type="Texture2D" uid="uid://cophmdlart5c0" path="res://images/TileHighlightpng.png" id="3_n5qf0"]
+[ext_resource type="Texture2D" uid="uid://dm7qo821ch0va" path="res://images/cursors and icons/cursor-ibeam.png" id="3_pey64"]
 
 [node name="Cursor" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_ndevg")
+cursor_texture = ExtResource("2_ndevg")
+ibeam_texture = ExtResource("3_pey64")
+highlight_texture = ExtResource("3_n5qf0")
 
 [node name="CursorSprite" type="Sprite2D" parent="."]
 z_index = 100
 texture = ExtResource("2_ndevg")
 offset = Vector2(8, 14)
+
+[node name="iBeamSprite" type="Sprite2D" parent="."]
+visible = false
+z_index = 100
+texture = ExtResource("3_pey64")
+offset = Vector2(6, 14)
 
 [node name="TileHighlight" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.137255)

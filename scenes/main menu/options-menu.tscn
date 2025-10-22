@@ -1,0 +1,128 @@
+[gd_scene load_steps=4 format=3 uid="uid://c68se1ah1ucfu"]
+
+[ext_resource type="Theme" uid="uid://dlwpgtq4i50gd" path="res://themes/MainTheme.tres" id="1_o5arg"]
+[ext_resource type="Script" uid="uid://c2nmqsvxl8kou" path="res://scripts/options-menu.gd" id="2_67dp8"]
+[ext_resource type="Texture2D" uid="uid://dhamob8ymmaqp" path="res://images/logo-RTP-white.png" id="3_nm2ii"]
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o5arg")
+script = ExtResource("2_67dp8")
+
+[node name="optionsMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="dualMargins" type="HBoxContainer" parent="optionsMenu"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="leftMargin" type="MarginContainer" parent="optionsMenu/dualMargins"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="optionsMenu/dualMargins/leftMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.152941, 0.156863, 0.164706, 1)
+
+[node name="leftVBox" type="VBoxContainer" parent="optionsMenu/dualMargins/leftMargin"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="logoBox" type="MarginContainer" parent="optionsMenu/dualMargins/leftMargin/leftVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect2" type="TextureRect" parent="optionsMenu/dualMargins/leftMargin/leftVBox/logoBox"]
+layout_mode = 2
+texture = ExtResource("3_nm2ii")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="btnBoxSub" type="MarginContainer" parent="optionsMenu/dualMargins/leftMargin/leftVBox"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 0
+
+[node name="btnBox" type="VBoxContainer" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="optionsLBL" type="Label" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "OPTIONS MENU"
+horizontal_alignment = 1
+
+[node name="audioBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "AUDIO"
+
+[node name="videoBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "VIDEO"
+
+[node name="controlsBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="gameBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "GAME RULES"
+
+[node name="modsBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "MODS"
+
+[node name="defaultsBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnBoxSub/btnBox"]
+layout_mode = 2
+text = "DEFAULT SETTINGS"
+
+[node name="btnMargin" type="MarginContainer" parent="optionsMenu/dualMargins/leftMargin/leftVBox"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 40
+
+[node name="btnBox" type="VBoxContainer" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnMargin"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="backBTN" type="Button" parent="optionsMenu/dualMargins/leftMargin/leftVBox/btnMargin/btnBox"]
+layout_mode = 2
+text = "BACK"
+
+[node name="rightMargin" type="MarginContainer" parent="optionsMenu/dualMargins"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="optionsMenu/dualMargins/rightMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.564706, 0.305882, 0.333333, 1)
+
+[node name="rightVBox" type="VBoxContainer" parent="optionsMenu/dualMargins/rightMargin"]
+layout_mode = 2
+
+[node name="headMargin" type="MarginContainer" parent="optionsMenu/dualMargins/rightMargin"]
+layout_mode = 2
+size_flags_vertical = 0

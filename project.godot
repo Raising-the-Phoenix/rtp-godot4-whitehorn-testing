@@ -14,11 +14,15 @@ config/name="whitehorn Local Map Test World"
 run/main_scene="uid://xswpm7040qa0"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+GlobalCursor="*res://scenes/cursor.tscn"
+
 [display]
 
 window/size/viewport_width=800
 window/size/viewport_height=600
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [gui]
